@@ -20,13 +20,19 @@ void Rep2El(int z[], int n)
 	Coin coins[n];
 	int i = 0, j = 0, k = 0;
 
-	// Calc section:: Time: O(n^2+n{final}), space: O(2n)
+	// Calc & Output section
+	cout << "\n\n";
+	for (int k = 0; k < 100; cout << "=", k++)
+		;
+
+	cout << "\n\nElements Repeated: ";
 	for (; i < n; i++)
 	{
 		for (j = 0; j < k; j++)
 			if (coins[j].val == z[i])
 			{
 				coins[j].freq++;
+				cout << coins[j].val << " ";
 				break;
 			}
 
@@ -37,16 +43,6 @@ void Rep2El(int z[], int n)
 			k++;
 		}
 	}
-
-	// Output section
-	cout << "\n\n";
-	for (int k = 0; k < 100; cout << "=", k++)
-		;
-
-	cout << "\n\nElements Occurring Odd no. of times: ";
-	for (i = 0; i < k; i++)
-		if (coins[i].freq % 2 != 0)
-			cout << coins[i].val << " ";
 
 	cout << "\n\n";
 	for (int k = 0; k < 100; cout << "=", k++)
