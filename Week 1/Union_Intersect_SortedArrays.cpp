@@ -8,6 +8,7 @@ void Union_Intersection_SortedArrays(int z1[], int m, int z2[], int n)
 	vector<int> Union, Intersection;
 	int i=0, j=0;
 
+	// Calc section
 	while (i<m && j<n)
 	{
 		if (z1[i] == z2[j])
@@ -33,6 +34,7 @@ void Union_Intersection_SortedArrays(int z1[], int m, int z2[], int n)
 	while (i<m)
 		Union.push_back(z1[i++]);
 
+	// Output section
 	cout << "\n\n";
 	for(int k=0; k<100; cout << "=", k++);
 
