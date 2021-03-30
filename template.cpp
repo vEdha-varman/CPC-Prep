@@ -11,14 +11,14 @@ int main()
 
 	// Output section
 	cout << "\n\n";
-	for (int k = 0; k < 100; cout << "=", k++)
+	for (int k = 1; k <= 100; cout << "=", k++)
 		;
 	
 	// 
 	cout << "\n\n";
 
 	cout << "\n\n";
-	for (int k = 0; k < 100; cout << "=", k++)
+	for (int k = 1; k <= 100; cout << "=", k++)
 		;
 
     return 0;
