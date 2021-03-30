@@ -6,17 +6,18 @@ using namespace std;
 void Union_Intersection_SortedArrays(int z1[], int m, int z2[], int n)
 {
 	vector<int> Union, Intersection;
-	int i=0, j=0;
+	int i = 0, j = 0;
 
 	// Calc section
-	while (i<m && j<n)
+	while (i < m && j < n)
 	{
 		if (z1[i] == z2[j])
 		{
 			Intersection.push_back(z1[i]);
 			Union.push_back(z2[j]);
 
-			i++;j++;
+			i++;
+			j++;
 		}
 		else if (z1[i] < z2[j])
 		{
@@ -29,14 +30,15 @@ void Union_Intersection_SortedArrays(int z1[], int m, int z2[], int n)
 			j++;
 		}
 	}
-	while (j<n)
+	while (j < n)
 		Union.push_back(z2[j++]);
-	while (i<m)
+	while (i < m)
 		Union.push_back(z1[i++]);
 
 	// Output section
 	cout << "\n\n";
-	for(int k=0; k<100; cout << "=", k++);
+	for (int k = 0; k < 100; cout << "=", k++)
+		;
 
 	cout << "\n\nUnion: ";
 	for (int i = 0; i < Union.size(); i++)
@@ -50,13 +52,13 @@ void Union_Intersection_SortedArrays(int z1[], int m, int z2[], int n)
 	}
 
 	cout << "\n\n";
-	for(int k=0; k<100; cout << "=", k++);
-
+	for (int k = 0; k < 100; cout << "=", k++)
+		;
 }
 
 int main()
 {
-	int m, n, i=0;
+	int m, n, i = 0;
 	cout << "\nEnter the sizes of sorted arrays: ";
 	cin >> m >> n;
 
@@ -68,7 +70,7 @@ int main()
 	cout << "\n\nEnter the values in 2nd sorted array:\n";
 	for (i = 0; i < n; cin >> z2[i++])
 		;
-	
+
 	Union_Intersection_SortedArrays(z1, m, z2, n);
 
 	return 0;
