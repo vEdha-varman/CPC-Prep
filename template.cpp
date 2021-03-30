@@ -15,8 +15,9 @@ int main()
 		;
 	
 	// 
+	cout << "\n\n";
 
-	cout << endl;
+	cout << "\n\n";
 	for (int k = 0; k < 100; cout << "=", k++)
 		;
 
