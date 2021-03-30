@@ -26,13 +26,12 @@ void OddOccur(int z[], int n)
 		for (j = 0; j < k; j++)
 			if (coins[j].val == z[i])
 			{
-				cout<<coins[j].val<<":"<<coins[j].freq++<<"; ";
+				coins[j].freq++;
 				break;
 			}
 
 		if (j == k)
 		{
-			cout << z[i]<<"' ";
 			coins[k].val = z[i];
 			coins[k].freq = 1;
 			k++;
@@ -46,8 +45,8 @@ void OddOccur(int z[], int n)
 
 	cout << "\n\nElements Occurring Odd no. of times: ";
 	for (i = 0; i < k; i++)
-		// if (coins[i].freq % 2 != 0)
-		cout << coins[i].val << ":" << coins[i].freq << " ";
+		if (coins[i].freq % 2 != 0)
+			cout << coins[i].val << " ";
 
 	cout << "\n\n";
 	for (int k = 0; k < 100; cout << "=", k++)
