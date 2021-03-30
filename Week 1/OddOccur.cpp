@@ -42,7 +42,7 @@ void OddOccur(int z[], int n)
 	cout << "\nElements Occurring Odd no. of times: ";
 	for (i = 0; i < k; i++)
 		if (coins[i].freq % 2 != 0)
-			cout << coins[i].val << " ";
+			cout << coins[i].val << ":" << coins[i].freq << " ";
 
 	cout << endl;
 	for (int k = 0; k < 100; cout << "=", k++)
